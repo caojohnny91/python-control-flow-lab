@@ -80,16 +80,13 @@ def check_voting_eligibility():
 
     age = input("Enter you age: ")
 
-    if age.isnumeric():
+    if age.isnumeric() and int(age) > 0:
         age = int(age)
 
-        if age > 0:
-            if age >= voting_age:
-                print("You are old enough to vote!")
-            else:
-                print("You are not old enough to vote!")
+        if age >= voting_age:
+            print("You are old enough to vote!")
         else:
-            print("Please enter a valid age.")
+            print("You are not old enough to vote!")
 
     else:
         print("Please enter a valid age.")
