@@ -283,7 +283,7 @@ def guess_number():
         if attempt == max_attempts:
             print("Last Chance!")
 
-        guess = input("Guess a number between 1 and 100: ")
+        guess = input(f"Attempt #{attempt}! Guess a number between 1 and 100: ")
 
         try:
             guess = int(guess)
@@ -302,7 +302,9 @@ def guess_number():
         elif guess > target_number:
             print("Guess is too high.")
 
-    print("Sorry, you failed to guess the number in five attempts.")
+    print(
+        f"Sorry, you failed to guess the number in five attempts. The answer was {target_number}."
+    )
 
 
 # Call the function
